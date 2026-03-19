@@ -51,3 +51,14 @@ class StudentViewModel:NSObject {
     
     
 }
+
+
+extension StudentViewModel {
+    func searchStudents(text: String?) {
+        if let text = text, text.isEmpty {
+            loadStudents()
+        } else {
+            students = repository.fetchStudents(searchText: text)
+        }
+    }
+}

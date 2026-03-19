@@ -54,6 +54,7 @@ class AddEmployViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "StudentCreateViewController" {
             if let destination = segue.destination as? StudentCreateViewController {
+                destination.modalPresentationStyle = .fullScreen
                 destination.headerName = "Students List"
             }
         }

@@ -89,7 +89,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HRV-hT-gqW" kind="showDetail" identifier="StudentCreateViewController" id="PXd-lv-Arz"/>
+                                    <segue destination="wuL-Md-7fK" kind="showDetail" identifier="StudentCreateViewController" id="PXd-lv-Arz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -131,11 +131,11 @@
             <objects>
                 <viewController storyboardIdentifier="StudentCreateViewController" id="HRV-hT-gqW" customClass="StudentCreateViewController" customModule="CoreData_Swift_InterView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gAh-Ul-ODx">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9HT-qS-sqN">
-                                <rect key="frame" x="20" y="89" width="353" height="125"/>
+                                <rect key="frame" x="20" y="202" width="353" height="125"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Student Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XrD-4F-PwK">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="35"/>
@@ -158,13 +158,13 @@
                                 </subviews>
                             </stackView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Fields are mandatory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahJ-sQ-Zpd">
-                                <rect key="frame" x="20" y="224" width="353" height="14.333333333333343"/>
+                                <rect key="frame" x="20" y="337" width="353" height="14.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0O-55-jqc">
-                                <rect key="frame" x="20" y="248.33333333333337" width="353" height="40"/>
+                                <rect key="frame" x="20" y="361.33333333333331" width="353" height="40"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Wof-aM-Jo1"/>
@@ -178,7 +178,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NJ8-uU-xc7">
-                                <rect key="frame" x="10" y="313.33333333333326" width="373" height="454.66666666666674"/>
+                                <rect key="frame" x="10" y="426.33333333333326" width="373" height="400.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -200,6 +200,7 @@
                             <constraint firstItem="ahJ-sQ-Zpd" firstAttribute="top" secondItem="IB7-bS-M2I" secondAttribute="bottom" constant="10" id="zOs-qA-0rc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="i1t-DQ-7Az"/>
                     <connections>
                         <outlet property="msgLbl" destination="ahJ-sQ-Zpd" id="xwE-IM-GNb"/>
                         <outlet property="studentAgeTextField" destination="IB7-bS-M2I" id="jML-1q-Ge9"/>
@@ -211,18 +212,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kn1-uO-tyt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023.6641221374045" y="850"/>
+            <point key="canvasLocation" x="1950.3816793893129" y="850"/>
         </scene>
         <!--Student Update View Controller-->
         <scene sceneID="aQs-NE-Nqg">
             <objects>
                 <viewController storyboardIdentifier="StudentUpdateViewController" id="UW1-nN-p1Q" customClass="StudentUpdateViewController" customModule="CoreData_Swift_InterView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rgc-dr-Abi">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KrE-BT-4Bx">
-                                <rect key="frame" x="20" y="109" width="353" height="125"/>
+                                <rect key="frame" x="20" y="222" width="353" height="125"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Student Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qUW-4t-8tM">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="35"/>
@@ -245,13 +246,13 @@
                                 </subviews>
                             </stackView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Fields are mandatory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvF-eq-v0i">
-                                <rect key="frame" x="20" y="244" width="353" height="14.333333333333314"/>
+                                <rect key="frame" x="20" y="357" width="353" height="14.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNL-Vu-8lM">
-                                <rect key="frame" x="20" y="268.33333333333331" width="353" height="40"/>
+                                <rect key="frame" x="20" y="381.33333333333331" width="353" height="40"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="HSx-3V-EgA"/>
@@ -288,7 +289,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ixs-7e-QoF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1926" y="850"/>
+            <point key="canvasLocation" x="2852.6717557251909" y="850"/>
         </scene>
         <!--Fetch Emp View Controller-->
         <scene sceneID="C8H-OE-01d">
@@ -422,6 +423,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lfn-Ja-hdV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="119.84732824427481" y="102.8169014084507"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HWg-EH-3A7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="wuL-Md-7fK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UsH-Ir-p2v">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HRV-hT-gqW" kind="relationship" relationship="rootViewController" id="UBf-Hi-Qot"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngh-rC-cZX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023.6641221374045" y="850"/>
         </scene>
     </scenes>
     <resources>
