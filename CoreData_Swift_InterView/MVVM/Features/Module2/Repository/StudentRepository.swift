@@ -68,3 +68,31 @@ final class StudentRepository {
         }
     }
 }
+
+
+extension StudentRepository {
+    
+    func fetchStudents(searchText:String?) -> [Student] {
+        let request:NSFetchRequest<Student> = Student.fetchRequest()
+        
+        // ✅ SAFE CHECK
+            guard let text = searchText, !text.isEmpty else {
+                request.sortDescriptors = [
+                    NSSortDescriptor(key: "name", ascending: true)
+                ]
+                return executeFetch(request)
+            }
+        
+        request.predicate = NSPredicate(
+                format: "name CONTAINS[cd] %@ OR course CONTAINS[cd] %@",text, text
+            )
+        
+        //sort
+        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        return executeFetch(request)
+    }
+    
+    
+    
+    
+}

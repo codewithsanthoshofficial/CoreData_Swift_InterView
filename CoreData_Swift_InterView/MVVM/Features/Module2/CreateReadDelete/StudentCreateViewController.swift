@@ -8,20 +8,20 @@
 import UIKit
 
 class StudentCreateViewController: UIViewController {
-
+    
     @IBOutlet weak var studentNameTextField: UITextField!
     @IBOutlet weak var studentCourseTextField: UITextField!
     @IBOutlet weak var studentAgeTextField: UITextField!
-    
     @IBOutlet weak var msgLbl: UILabel!
-    
     @IBOutlet weak var tableview: UITableView!
+    
+    
     var viewmodel:StudentViewModel = StudentViewModel()
     var headerName = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.setupSearch()
         self.setup()
         self.bindViewModel()
     }
@@ -73,14 +73,13 @@ extension StudentCreateViewController {
     }
     
     private func bindViewModel() {
-            viewmodel.onReload = { [weak self] in
-                DispatchQueue.main.async {
-                    self?.tableview.reloadData()
-                }
+        viewmodel.onReload = { [weak self] in
+            DispatchQueue.main.async {
+                self?.tableview.reloadData()
             }
         }
+    }
 }
-
 
 extension StudentCreateViewController:UITableViewDataSource {
     
@@ -111,4 +110,14 @@ extension StudentCreateViewController:UITableViewDelegate {
     }
 }
 
-
+extension StudentCreateViewController : UISearchBarDelegate {
+    func setupSearch() {
+        let searchBar = UISearchBar()
+        searchBar.delegate = self
+        navigationItem.titleView = searchBar
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            viewmodel.searchStudents(text: searchText)
+    }
+}
